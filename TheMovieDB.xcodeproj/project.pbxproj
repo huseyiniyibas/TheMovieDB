@@ -13,6 +13,21 @@
 		61B09672275161170002C84B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B09670275161170002C84B /* Main.storyboard */; };
 		61B09674275161190002C84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61B09673275161190002C84B /* Assets.xcassets */; };
 		61B09677275161190002C84B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B09675275161190002C84B /* LaunchScreen.storyboard */; };
+		61B09680275162950002C84B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0967F275162950002C84B /* Network.swift */; };
+		61B09684275162EE0002C84B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B09683275162EE0002C84B /* Router.swift */; };
+		61B096862751630E0002C84B /* RouterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B096852751630E0002C84B /* RouterProvider.swift */; };
+		61B09688275163190002C84B /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B09687275163190002C84B /* NetworkProvider.swift */; };
+		61B0968B275163330002C84B /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0968A275163330002C84B /* ContentType.swift */; };
+		61B0968D275163450002C84B /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0968C275163450002C84B /* EndPointType.swift */; };
+		61B0968F275163570002C84B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0968E275163570002C84B /* HTTPMethod.swift */; };
+		61B09691275163670002C84B /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B09690275163670002C84B /* HTTPTask.swift */; };
+		61B09693275163750002C84B /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B09692275163750002C84B /* NetworkLogger.swift */; };
+		61B09696275163C20002C84B /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B09695275163C20002C84B /* NetworkEnvironment.swift */; };
+		61B09698275163DF0002C84B /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B09697275163DF0002C84B /* ParameterEncoding.swift */; };
+		61B0969A275164000002C84B /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B09699275164000002C84B /* JSONParameterEncoder.swift */; };
+		61B0969C275164260002C84B /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0969B275164260002C84B /* URLParameterEncoder.swift */; };
+		61B0969F2751644D0002C84B /* EndPointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0969E2751644D0002C84B /* EndPointManager.swift */; };
+		61B096A5275165B30002C84B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B096A4275165B30002C84B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +39,21 @@
 		61B09673275161190002C84B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61B09676275161190002C84B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61B09678275161190002C84B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61B0967F275162950002C84B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		61B09683275162EE0002C84B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		61B096852751630E0002C84B /* RouterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProvider.swift; sourceTree = "<group>"; };
+		61B09687275163190002C84B /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		61B0968A275163330002C84B /* ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
+		61B0968C275163450002C84B /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		61B0968E275163570002C84B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		61B09690275163670002C84B /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		61B09692275163750002C84B /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		61B09695275163C20002C84B /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
+		61B09697275163DF0002C84B /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		61B09699275164000002C84B /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		61B0969B275164260002C84B /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		61B0969E2751644D0002C84B /* EndPointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointManager.swift; sourceTree = "<group>"; };
+		61B096A4275165B30002C84B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +86,8 @@
 		61B09669275161170002C84B /* TheMovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				61B096A0275165960002C84B /* Utilities */,
+				61B0967E2751625B0002C84B /* Networking */,
 				61B0966A275161170002C84B /* AppDelegate.swift */,
 				61B0966C275161170002C84B /* SceneDelegate.swift */,
 				61B0966E275161170002C84B /* ViewController.swift */,
@@ -65,6 +97,83 @@
 				61B09678275161190002C84B /* Info.plist */,
 			);
 			path = TheMovieDB;
+			sourceTree = "<group>";
+		};
+		61B0967E2751625B0002C84B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				61B0969D275164440002C84B /* EndPoint */,
+				61B09681275162E00002C84B /* Network */,
+				61B09682275162E80002C84B /* Router */,
+				61B09689275163290002C84B /* Service */,
+				61B09694275163B40002C84B /* Utils */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		61B09681275162E00002C84B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				61B0967F275162950002C84B /* Network.swift */,
+				61B09687275163190002C84B /* NetworkProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		61B09682275162E80002C84B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				61B09683275162EE0002C84B /* Router.swift */,
+				61B096852751630E0002C84B /* RouterProvider.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		61B09689275163290002C84B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				61B0968A275163330002C84B /* ContentType.swift */,
+				61B0968C275163450002C84B /* EndPointType.swift */,
+				61B0968E275163570002C84B /* HTTPMethod.swift */,
+				61B09690275163670002C84B /* HTTPTask.swift */,
+				61B09692275163750002C84B /* NetworkLogger.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		61B09694275163B40002C84B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				61B09699275164000002C84B /* JSONParameterEncoder.swift */,
+				61B09695275163C20002C84B /* NetworkEnvironment.swift */,
+				61B09697275163DF0002C84B /* ParameterEncoding.swift */,
+				61B0969B275164260002C84B /* URLParameterEncoder.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		61B0969D275164440002C84B /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				61B0969E2751644D0002C84B /* EndPointManager.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		61B096A0275165960002C84B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				61B096A1275165A30002C84B /* Constants */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		61B096A1275165A30002C84B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				61B096A4275165B30002C84B /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +247,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B09698275163DF0002C84B /* ParameterEncoding.swift in Sources */,
+				61B09693275163750002C84B /* NetworkLogger.swift in Sources */,
+				61B09688275163190002C84B /* NetworkProvider.swift in Sources */,
+				61B0968B275163330002C84B /* ContentType.swift in Sources */,
+				61B0968D275163450002C84B /* EndPointType.swift in Sources */,
+				61B0969A275164000002C84B /* JSONParameterEncoder.swift in Sources */,
 				61B0966F275161170002C84B /* ViewController.swift in Sources */,
 				61B0966B275161170002C84B /* AppDelegate.swift in Sources */,
+				61B0969C275164260002C84B /* URLParameterEncoder.swift in Sources */,
+				61B09684275162EE0002C84B /* Router.swift in Sources */,
+				61B0969F2751644D0002C84B /* EndPointManager.swift in Sources */,
+				61B096862751630E0002C84B /* RouterProvider.swift in Sources */,
+				61B09691275163670002C84B /* HTTPTask.swift in Sources */,
+				61B09680275162950002C84B /* Network.swift in Sources */,
+				61B0968F275163570002C84B /* HTTPMethod.swift in Sources */,
 				61B0966D275161170002C84B /* SceneDelegate.swift in Sources */,
+				61B09696275163C20002C84B /* NetworkEnvironment.swift in Sources */,
+				61B096A5275165B30002C84B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
