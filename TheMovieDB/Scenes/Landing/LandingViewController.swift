@@ -15,10 +15,13 @@ class LandingViewController: BaseViewController {
             viewModel?.delegate = self
         }
     }
+    var movies: [MovieDetail]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Trending Movies"
+        tableView.register(UINib(nibName: "MovieTableCell", bundle: nil), forCellReuseIdentifier: "MovieTableCell")
         viewModel?.getTrendingItems(.movie, .week)
     }
 }
@@ -27,24 +30,33 @@ class LandingViewController: BaseViewController {
 
 extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return movies?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableCell") as? MovieTableCell {
+            guard let movie = movies?[indexPath.row] else { return UITableViewCell() }
+            cell.setCell(with: movie)
+            
+            return cell
+        }
+        
         return UITableViewCell()
     }
 }
-
 
 // MARK: - Network
 
 extension LandingViewController: LandingViewModelDelegate {
     func viewModelOutput(_ output: LandingViewModelOutput) {
-        switch output {
-        case .movies(let movies):
-            print("movies: ", movies)
-        case .showAlert(let message):
-            print("Alert: ", message)
+        DispatchQueue.main.async {
+            switch output {
+            case .movies(let movies):
+                self.movies = movies
+                self.tableView.reloadData()
+            case .showAlert(let message):
+                print("Alert: ", message)
+            }
         }
     }
     
