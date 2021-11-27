@@ -11,7 +11,7 @@ let environment: NetworkEnvironment = .dev
 
 enum EndPointManager {
     case movieDetails(_ id: Int)
-        
+    case trendingItems(media: MediaType, time: TimeWindow)
 }
 
 extension EndPointManager: EndPointType {
@@ -32,7 +32,9 @@ extension EndPointManager: EndPointType {
     var path: String {
         switch self {
         case .movieDetails(let id):
-            return "movie/\(id)?api_key=\(Constants.API_KEY)"
+            return "movie/\(id)" + "?api_key=\(Constants.API_KEY)"
+        case .trendingItems(let media, let time):
+            return "trending/\(media.rawValue)/\(time.rawValue)" + "?api_key=\(Constants.API_KEY)"
         }
     }
 
