@@ -39,7 +39,7 @@ struct Network {
                     DispatchQueue.main.async {
                         // TODO: SessionManager.logout()
                         let appDelegate = UIApplication.shared.delegate as? AppDelegate
-                        appDelegate?.window?.rootViewController = ViewController()
+                        appDelegate?.window?.rootViewController = LandingViewController()
                     }
                 case .success:
                     guard let responseData = data else {
