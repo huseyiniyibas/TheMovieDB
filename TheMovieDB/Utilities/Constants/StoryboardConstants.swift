@@ -9,4 +9,5 @@ import Foundation
 
 enum AppSceneName: String {
     case landing = "Landing"
+    case movieDetail = "MovieDetail"
 }

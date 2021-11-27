@@ -31,7 +31,7 @@ extension EndPointManager: EndPointType {
 
     var path: String {
         switch self {
-        case let .movieDetails(id):
+        case .movieDetails(let id):
             return "movie/\(id)?api_key=\(Constants.API_KEY)"
         }
     }
