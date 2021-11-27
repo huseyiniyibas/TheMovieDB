@@ -35,6 +35,8 @@
 		61B096B82752367A0002C84B /* StoryboardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B096B72752367A0002C84B /* StoryboardConstants.swift */; };
 		61B096BC275238120002C84B /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B096BB275238120002C84B /* LandingViewModel.swift */; };
 		61B096BE275238BE0002C84B /* LandingContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B096BD275238BE0002C84B /* LandingContracts.swift */; };
+		61B096C127523A430002C84B /* MovieNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B096C027523A430002C84B /* MovieNetwork.swift */; };
+		61B096C527523ADB0002C84B /* MovieDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B096C427523ADB0002C84B /* MovieDetailResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		61B096B72752367A0002C84B /* StoryboardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardConstants.swift; sourceTree = "<group>"; };
 		61B096BB275238120002C84B /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 		61B096BD275238BE0002C84B /* LandingContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingContracts.swift; sourceTree = "<group>"; };
+		61B096C027523A430002C84B /* MovieNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetwork.swift; sourceTree = "<group>"; };
+		61B096C427523ADB0002C84B /* MovieDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 				61B09675275161190002C84B /* LaunchScreen.storyboard */,
 				61B096A627516C4C0002C84B /* Scenes */,
 				61B0967E2751625B0002C84B /* Networking */,
+				61B096C227523A710002C84B /* NetworkModels */,
 				61B096A0275165960002C84B /* Utilities */,
 			);
 			path = TheMovieDB;
@@ -115,6 +120,7 @@
 		61B0967E2751625B0002C84B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				61B096BF27523A360002C84B /* API */,
 				61B0969D275164440002C84B /* EndPoint */,
 				61B09681275162E00002C84B /* Network */,
 				61B09682275162E80002C84B /* Router */,
@@ -221,6 +227,38 @@
 			path = Landing;
 			sourceTree = "<group>";
 		};
+		61B096BF27523A360002C84B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				61B096C027523A430002C84B /* MovieNetwork.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		61B096C227523A710002C84B /* NetworkModels */ = {
+			isa = PBXGroup;
+			children = (
+				61B096C627523B110002C84B /* Models */,
+				61B096C327523A7F0002C84B /* Responses */,
+			);
+			path = NetworkModels;
+			sourceTree = "<group>";
+		};
+		61B096C327523A7F0002C84B /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				61B096C427523ADB0002C84B /* MovieDetailResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		61B096C627523B110002C84B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,12 +335,14 @@
 				61B09693275163750002C84B /* NetworkLogger.swift in Sources */,
 				61B09688275163190002C84B /* NetworkProvider.swift in Sources */,
 				61B0968B275163330002C84B /* ContentType.swift in Sources */,
+				61B096C527523ADB0002C84B /* MovieDetailResponse.swift in Sources */,
 				61B0968D275163450002C84B /* EndPointType.swift in Sources */,
 				61B096BE275238BE0002C84B /* LandingContracts.swift in Sources */,
 				61B096AF275235510002C84B /* BaseViewController.swift in Sources */,
 				61B0969A275164000002C84B /* JSONParameterEncoder.swift in Sources */,
 				61B0966B275161170002C84B /* AppDelegate.swift in Sources */,
 				61B096AD275235420002C84B /* BaseNavigationController.swift in Sources */,
+				61B096C127523A430002C84B /* MovieNetwork.swift in Sources */,
 				61B0969C275164260002C84B /* URLParameterEncoder.swift in Sources */,
 				61B096BC275238120002C84B /* LandingViewModel.swift in Sources */,
 				61B09684275162EE0002C84B /* Router.swift in Sources */,

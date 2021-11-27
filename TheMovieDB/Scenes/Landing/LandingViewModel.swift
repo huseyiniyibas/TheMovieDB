@@ -8,10 +8,12 @@
 import Foundation
 
 final class LandingViewModel: LandingViewModelProtocol {
-//    private let service: TODO: - Implement Network Provider
+    private let service: NetworkProvider
     weak var delegate: LandingViewModelDelegate?
     
-    // TODO: - Init with Network Provider
+    init(service: NetworkProvider) {
+        self.service = service
+    }
     
     func go(to viewController: LandingViewRoute) {
 //        self.delegate?.navigate(to: ) // TODO: - Navigate to Detail page

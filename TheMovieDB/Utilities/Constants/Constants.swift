@@ -11,6 +11,7 @@ enum Constants {
     static let DEVELOPMENT_BASE_URL = "https://api.themoviedb.org/3/"
     static let QA_BASE_URL = ""
     static let LIVE_BASE_URL = ""
+    static let IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w185/"
     /// Astatic letPI Key (v3 auth)
     static let API_KEY = "2c78d054b5342ec9577127b089d2bba7"
     /// API Read Access Token (v4 auth)

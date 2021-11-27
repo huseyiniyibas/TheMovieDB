@@ -10,7 +10,7 @@ import Foundation
 let environment: NetworkEnvironment = .dev
 
 enum EndPointManager {
-    case movie(_ id: Int)
+    case movieDetails(_ id: Int)
         
 }
 
@@ -31,7 +31,7 @@ extension EndPointManager: EndPointType {
 
     var path: String {
         switch self {
-        case let .movie(id):
+        case let .movieDetails(id):
             return "movie/\(id)?api_key=\(Constants.API_KEY)"
         }
     }

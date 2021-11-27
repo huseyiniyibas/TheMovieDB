@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class NetworkProvider {
+    public func makeMovieNetwork() -> MovieNetwork {
+        let network = Network()
+        
+        return MovieNetwork(network: network)
+    }
+}
