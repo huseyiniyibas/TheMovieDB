@@ -234,6 +234,7 @@
 				61B096BD275238BE0002C84B /* LandingContracts.swift */,
 				61B096B12752363D0002C84B /* LandingViewController.swift */,
 				61B096BB275238120002C84B /* LandingViewModel.swift */,
+				61B096D2275244A00002C84B /* Cells */,
 			);
 			path = Landing;
 			sourceTree = "<group>";
@@ -280,6 +281,13 @@
 				61B096D0275242E80002C84B /* MovieDetailViewModel.swift */,
 			);
 			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		61B096D2275244A00002C84B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
