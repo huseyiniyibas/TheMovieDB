@@ -10,6 +10,7 @@ import Foundation
 final class MovieDetailBuilder: BaseBuilder {
     static func make(_ id: Int) -> MovieDetailViewController {
         let controller: MovieDetailViewController = self.load(appStoryboard: .movieDetail, viewController: "MovieDetail")
+        controller.viewModel = MovieDetailViewModel(service: NetworkProvider())
         controller.id = id
         
         return controller

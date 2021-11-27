@@ -8,22 +8,39 @@
 import UIKit
 
 class MovieDetailViewController: BaseViewController {
+    @IBOutlet weak var posterImageView: UIImageView!
+    @IBOutlet weak var overviewLabel: UILabel!
     
+    var viewModel: MovieDetailViewModelProtocol? {
+        didSet {
+            viewModel?.delegate = self
+        }
+    }
     var id: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        guard let id = id else { return }
+        viewModel?.getMovieDetails(id)
     }
 
 }
 
 extension MovieDetailViewController: MovieDetailViewModelDelegate {
     func viewModelOutput(_ output: MovieDetailViewModelOutput) {
-        switch output {
-        case .showAlert(let message):
-            print("Alert: ", message)
+        DispatchQueue.main.async {
+            switch output {
+            case .movie(let movie):
+                self.title = movie.originalTitle
+                self.overviewLabel.text = movie.overview
+                guard let posterPath = movie.posterPath, let url = URL(string: Constants.IMAGE_BASE_URL + posterPath) else { return }
+                self.posterImageView.image = CommonMethods.downloadImage(from: url)
+                self.posterImageView.downloaded(from: url)
+                
+            case .showAlert(let message):
+                print("Alert: ", message)
+            }
         }
     }
     

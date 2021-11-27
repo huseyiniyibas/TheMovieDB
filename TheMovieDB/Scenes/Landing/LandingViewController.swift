@@ -22,6 +22,7 @@ class LandingViewController: BaseViewController {
 
         title = "Trending Movies"
         tableView.register(UINib(nibName: "MovieTableCell", bundle: nil), forCellReuseIdentifier: "MovieTableCell")
+        tableView.separatorStyle = .none
         viewModel?.getTrendingItems(.movie, .week)
     }
 }
@@ -36,6 +37,7 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableCell") as? MovieTableCell {
             guard let movie = movies?[indexPath.row] else { return UITableViewCell() }
+            cell.selectionStyle = .none
             cell.setCell(with: movie)
             
             return cell

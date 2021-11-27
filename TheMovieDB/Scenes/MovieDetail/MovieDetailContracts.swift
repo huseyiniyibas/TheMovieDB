@@ -8,6 +8,7 @@
 import Foundation
 
 enum MovieDetailViewModelOutput {
+    case movie(_ movie: MovieDetail)
     case showAlert(_ messsage: String)
 }
 
@@ -23,5 +24,6 @@ protocol MovieDetailViewModelDelegate: AnyObject {
 protocol MovieDetailViewModelProtocol: AnyObject {
     var delegate: MovieDetailViewModelDelegate? { get set }
     
+    func getMovieDetails(_ id: Int)
     func go(to viewController: MovieDetailViewRoute)
 }

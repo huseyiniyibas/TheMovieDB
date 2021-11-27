@@ -47,6 +47,7 @@
 		61B096DB275248540002C84B /* TrendingResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B096DA275248540002C84B /* TrendingResponses.swift */; };
 		61B096DE275268E20002C84B /* MovieTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B096DC275268E20002C84B /* MovieTableCell.swift */; };
 		61B096DF275268E20002C84B /* MovieTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61B096DD275268E20002C84B /* MovieTableCell.xib */; };
+		61B096E4275277C80002C84B /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B096E3275277C80002C84B /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		61B096DA275248540002C84B /* TrendingResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingResponses.swift; sourceTree = "<group>"; };
 		61B096DC275268E20002C84B /* MovieTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableCell.swift; sourceTree = "<group>"; };
 		61B096DD275268E20002C84B /* MovieTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableCell.xib; sourceTree = "<group>"; };
+		61B096E3275277C80002C84B /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 		61B096A0275165960002C84B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				61B096E2275277BC0002C84B /* Extensions */,
 				61B096A1275165A30002C84B /* Constants */,
 			);
 			path = Utilities;
@@ -313,6 +316,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		61B096E2275277BC0002C84B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				61B096E3275277C80002C84B /* UIImageView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -393,6 +404,7 @@
 				61B096C9275242CA0002C84B /* MovieDetailViewController.swift in Sources */,
 				61B096DE275268E20002C84B /* MovieTableCell.swift in Sources */,
 				61B0968B275163330002C84B /* ContentType.swift in Sources */,
+				61B096E4275277C80002C84B /* UIImageView+Extension.swift in Sources */,
 				61B096D7275247210002C84B /* TimeWindow.swift in Sources */,
 				61B0968D275163450002C84B /* EndPointType.swift in Sources */,
 				61B096BE275238BE0002C84B /* LandingContracts.swift in Sources */,
