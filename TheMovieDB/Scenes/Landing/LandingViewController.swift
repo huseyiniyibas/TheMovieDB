@@ -43,6 +43,11 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let id = movies?[indexPath.row].id else { return }
+        viewModel?.go(to: .detail(id))
+    }
 }
 
 // MARK: - Network
@@ -61,9 +66,11 @@ extension LandingViewController: LandingViewModelDelegate {
     }
     
     func navigate(to route: LandingViewRoute) {
-        switch route {
-        case .detail:
-            show(MovieDetailBuilder.make(), sender: nil)
+        DispatchQueue.main.async {
+            switch route {
+            case .detail(let id):
+                self.show(MovieDetailBuilder.make(id), sender: nil)
+            }
         }
     }
 }

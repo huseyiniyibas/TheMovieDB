@@ -18,16 +18,20 @@ public struct MovieDetail: Decodable {
     
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decode(Int.self, forKey: .id)
         voteAverage = try values.decode(Double.self, forKey: .voteAverage)
         originalTitle = try values.decode(String.self, forKey: .originalTitle)
+        overview = try values.decode(String.self, forKey: .overview)
         posterPath = try values.decode(String.self, forKey: .posterPath)
         backdropPath = try values.decode(String.self, forKey: .backdropPath)
         releaseDate = try values.decode(String.self, forKey: .releaseDate)
     }
 
     enum CodingKeys: String, CodingKey {
+        case id = "id"
         case voteAverage = "vote_average"
         case originalTitle = "original_title"
+        case overview = "overview"
         case posterPath = "poster_path"
         case backdropPath = "backdrop_path"
         case releaseDate = "release_date"

@@ -33,6 +33,6 @@ final class LandingViewModel: LandingViewModelProtocol {
     }
     
     func go(to viewController: LandingViewRoute) {
-//        self.delegate?.navigate(to: ) // TODO: - Navigate to Detail page
+        self.delegate?.navigate(to: viewController)
     }
 }

@@ -13,7 +13,7 @@ enum LandingViewModelOutput {
 }
 
 enum LandingViewRoute {
-    case detail
+    case detail(_ id: Int)
 }
 
 protocol LandingViewModelDelegate: AnyObject {
