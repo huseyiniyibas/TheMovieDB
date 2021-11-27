@@ -26,20 +26,19 @@ enum Result<String> {
 struct Network {
     func genericFetch<T: Decodable>(_ endpoint: EndPointManager, completion: @escaping (T?, String?, Int) -> Void) {
         let router = RouterProvider().makeRouter()
-
+        
         router.request(endpoint) { data, response, error in
             if error != nil {
                 completion(nil, "Please check your network connection.", 0)
             }
-
+            
             if let response = response as? HTTPURLResponse {
                 let result = self.handleNetworkResponse(response)
                 switch result {
                 case .unauthorized:
                     DispatchQueue.main.async {
-                        // TODO: SessionManager.logout()
-                        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-                        appDelegate?.window?.rootViewController = LandingViewController()
+                        let sceneDelegate = UIApplication.shared.delegate as? SceneDelegate
+                        sceneDelegate?.window?.rootViewController = LandingViewController()
                     }
                 case .success:
                     guard let responseData = data else {
@@ -58,7 +57,7 @@ struct Network {
             }
         }
     }
-
+    
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String> {
         switch response.statusCode {
         case 406:

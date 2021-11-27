@@ -8,6 +8,7 @@
 import Foundation
 
 enum LandingViewModelOutput {
+    case movies(_ movies: [MovieDetail])
     case showAlert(_ messsage: String)
 }
 
@@ -23,5 +24,6 @@ protocol LandingViewModelDelegate: AnyObject {
 protocol LandingViewModelProtocol: AnyObject {
     var delegate: LandingViewModelDelegate? { get set }
     
+    func getTrendingItems(_ media: MediaType, _ time: TimeWindow)
     func go(to viewController: LandingViewRoute)
 }

@@ -10,12 +10,17 @@ import UIKit
 class LandingViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    var viewModel: LandingViewModelProtocol? {
+        didSet {
+            viewModel?.delegate = self
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        viewModel?.getTrendingItems(.movie, .week)
     }
-    
 }
 
 // MARK: - UITableView
@@ -36,6 +41,8 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
 extension LandingViewController: LandingViewModelDelegate {
     func viewModelOutput(_ output: LandingViewModelOutput) {
         switch output {
+        case .movies(let movies):
+            print("movies: ", movies)
         case .showAlert(let message):
             print("Alert: ", message)
         }
@@ -47,6 +54,4 @@ extension LandingViewController: LandingViewModelDelegate {
             show(MovieDetailBuilder.make(), sender: nil)
         }
     }
-    
-    
 }

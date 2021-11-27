@@ -32,9 +32,9 @@ extension EndPointManager: EndPointType {
     var path: String {
         switch self {
         case .movieDetails(let id):
-            return "movie/\(id)" + "?api_key=\(Constants.API_KEY)"
+            return "movie/\(id)"
         case .trendingItems(let media, let time):
-            return "trending/\(media.rawValue)/\(time.rawValue)" + "?api_key=\(Constants.API_KEY)"
+            return "trending/\(media.rawValue)/\(time.rawValue)"
         }
     }
 
@@ -48,7 +48,11 @@ extension EndPointManager: EndPointType {
     var task: HTTPTask {
         switch self {
         default:
-            return .requestParameters(bodyParameters: [:], bodyEncoding: .jsonEncoding, urlParameters: nil)
+            let param: [String: Any] = [
+                "api_key": Constants.API_KEY
+            ]
+            
+            return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: param)
         }
     }
     
