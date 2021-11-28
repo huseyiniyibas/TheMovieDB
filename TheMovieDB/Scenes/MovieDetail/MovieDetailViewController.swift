@@ -35,7 +35,6 @@ extension MovieDetailViewController: MovieDetailViewModelDelegate {
                 self.title = movie.originalTitle
                 self.overviewLabel.text = movie.overview
                 guard let posterPath = movie.posterPath, let url = URL(string: Constants.IMAGE_BASE_URL + posterPath) else { return }
-                self.posterImageView.image = CommonMethods.downloadImage(from: url)
                 self.posterImageView.downloaded(from: url)
                 
             case .showAlert(let message):
